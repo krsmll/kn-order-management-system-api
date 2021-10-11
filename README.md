@@ -1,5 +1,10 @@
 # Order Management System API
 
+## Kühne+Nagel Back-End Java Engineer Internship Assessment
+This project uses Spring Boot, Spring Data JPA, Hibernate, Liquibase, Lombok, PostgreSQL, and Docker.
+
+Check `build.gradle` for more specific info.
+
 ## Running the Application
 
 ### Database
@@ -11,6 +16,11 @@ Creating and running the container with the right configuration is done by runni
 ```bash
 docker run --name kn_order_management_system_api -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 ```
+
+If you wish for whatever reason to drop all data and return to the initial data, 
+uncomment `spring.liquibase.drop-first=true` in `application.properties` in the resources folder and run the application. 
+
+You might want to comment that line back out if you want to keep any data saved in there.
 
 ### Unit Tests
 
@@ -72,6 +82,7 @@ Example of response:
             "id": 34,
             "orderId": 14,
             "product": {
+
               "id": 1,
               "name": "Cake - Cake Sheet Macaroon",
               "skuCode": "544201160321",
