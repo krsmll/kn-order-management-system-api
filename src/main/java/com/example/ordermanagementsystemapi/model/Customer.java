@@ -1,18 +1,22 @@
 package com.example.ordermanagementsystemapi.model;
 
+import com.example.ordermanagementsystemapi.dto.CustomerDto;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "customer")
 public class Customer {
     @Id
-    @Column(name = "id")
-    @GeneratedValue
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "full_name", nullable = false)
     private String fullName;
@@ -26,6 +30,11 @@ public class Customer {
     @Column(name = "registration_code", nullable = false)
     private String registrationCode;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "customer")
     private List<Order> orders;
+
+    public void addOrder(Order order) {
+        order.setCustomer(this);
+        orders.add(order);
+    }
 }

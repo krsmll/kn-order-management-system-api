@@ -1,5 +1,6 @@
 package com.example.ordermanagementsystemapi.services;
 
+import com.example.ordermanagementsystemapi.dto.CustomerDto;
 import com.example.ordermanagementsystemapi.exceptions.NotFoundException;
 import com.example.ordermanagementsystemapi.model.Customer;
 import com.example.ordermanagementsystemapi.repositories.CustomerRepository;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
 
 @Service
 @NoArgsConstructor
@@ -23,19 +25,15 @@ public class CustomerService {
 
     public Customer getCustomer(long id) {
         Optional<Customer> customer = this.customerRepository.findById(id);
-        return customer.orElseThrow(() -> new NotFoundException(Customer.class.getName(), id));
+
+        return customer.orElseThrow(() -> new NotFoundException(Customer.class.getSimpleName(), id));
     }
 
-    public Customer createCustomer(Customer customer) {
-        return this.customerRepository.save(customer);
-    }
+    public Customer createCustomer(CustomerDto dto) {
+        Customer newC = new Customer(
+                dto.getId(), dto.getFullName(), dto.getEmail(), dto.getTelephone(), dto.getRegistrationCode(), List.of()
+        );
 
-
-    public Customer updateCustomer(Customer customer) {
-        return this.customerRepository.save(customer);
-    }
-
-    public void deleteCustomer(long id) {
-        this.customerRepository.deleteById(id);
+        return this.customerRepository.save(newC);
     }
 }

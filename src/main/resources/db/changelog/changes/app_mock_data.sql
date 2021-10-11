@@ -1,0 +1,83 @@
+insert into "customer" (full_name, email, telephone, registration_code) values ('Hardy Baldrey', 'hbaldrey0@earthlink.net', '967-875-6011', 'xhruZ8e2aiE3C5xaSGZjFGFt8xm');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Adolphe Brundale', 'abrundale1@miibeian.gov.cn', '537-690-4697', '1xwuEc5Gx0d3UqIy70pybNR8TYW');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Ruprecht Basini-Gazzi', 'rbasinigazzi2@oakley.com', '465-406-2663', 'JD9ykv02tBj7AEhc0gG7lvCnR5v');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Licha Roarty', 'lroarty3@tripadvisor.com', '812-990-0435', 'eTPw4MZhdK689QPtEGehJkxILLX');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Tammi Riddington', 'triddington4@marketwatch.com', '422-863-6337', 'o4iGed0CkS3BvqjMBIgohife0XU');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Marcellina Farnill', 'mfarnill5@mlb.com', '347-695-3077', '3WlWD6vTPin8gmt4IeqxvAuSCgh');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Andrea Herrieven', 'aherrieven6@china.com.cn', '825-976-1181', 'GxDCQurm9yzHwa3t0VA2liKdtEA');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Nikola Olligan', 'nolligan7@google.pl', '400-710-1936', 'ZQMPPAjzQ9oQwM6ratKSRlBC8q9');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Fernandina Betham', 'fbetham8@sogou.com', '556-343-5629', 'Rklu1nd5CpYZzc1kAmLaWfrzDI2');
+insert into "customer" (full_name, email, telephone, registration_code) values ('Boniface Heditch', 'bheditch9@theatlantic.com', '245-365-8371', 'IUCyQmHHk36LRMlBlRg1oAeKYFk');
+
+insert into "product" (name, sku_code, unit_price) values ('Cake - Cake Sheet Macaroon', '544201160321', 15);
+insert into "product" (name, sku_code, unit_price) values ('Mayonnaise', '719548945490', 3);
+insert into "product" (name, sku_code, unit_price) values ('Limes', '644965877982', 0.5);
+insert into "product" (name, sku_code, unit_price) values ('Pepper - Jalapeno', '167965933260', 1);
+insert into "product" (name, sku_code, unit_price) values ('Sugar - Sweet N Low, Individual', '843591714405', 1);
+insert into "product" (name, sku_code, unit_price) values ('Avocado', '591341579403', 2);
+
+insert into "customer_order" (customer_id, submission_date) values (5, '2021-04-04');
+insert into "customer_order" (customer_id, submission_date) values (3, '2020-11-29');
+insert into "customer_order" (customer_id, submission_date) values (3, '2021-10-06');
+insert into "customer_order" (customer_id, submission_date) values (5, '2021-08-22');
+insert into "customer_order" (customer_id, submission_date) values (4, '2021-04-20');
+insert into "customer_order" (customer_id, submission_date) values (5, '2021-04-13');
+insert into "customer_order" (customer_id, submission_date) values (7, '2021-10-05');
+insert into "customer_order" (customer_id, submission_date) values (7, '2021-03-18');
+insert into "customer_order" (customer_id, submission_date) values (3, '2021-05-08');
+insert into "customer_order" (customer_id, submission_date) values (10, '2020-12-14');
+insert into "customer_order" (customer_id, submission_date) values (10, '2021-08-16');
+insert into "customer_order" (customer_id, submission_date) values (9, '2020-12-12');
+insert into "customer_order" (customer_id, submission_date) values (5, '2021-08-30');
+insert into "customer_order" (customer_id, submission_date) values (2, '2021-06-08');
+insert into "customer_order" (customer_id, submission_date) values (8, '2020-11-16');
+insert into "customer_order" (customer_id, submission_date) values (6, '2021-04-08');
+insert into "customer_order" (customer_id, submission_date) values (6, '2020-12-31');
+insert into "customer_order" (customer_id, submission_date) values (2, '2021-05-03');
+insert into "customer_order" (customer_id, submission_date) values (6, '2021-08-21');
+insert into "customer_order" (customer_id, submission_date) values (10, '2021-01-22');
+
+insert into "order_line" (order_id, product_id, quantity) values (1, 3, 3);
+insert into "order_line" (order_id, product_id, quantity) values (2, 3, 10);
+insert into "order_line" (order_id, product_id, quantity) values (3, 6, 1);
+insert into "order_line" (order_id, product_id, quantity) values (4, 5, 3);
+insert into "order_line" (order_id, product_id, quantity) values (5, 6, 7);
+insert into "order_line" (order_id, product_id, quantity) values (6, 3, 6);
+insert into "order_line" (order_id, product_id, quantity) values (7, 2, 10);
+insert into "order_line" (order_id, product_id, quantity) values (8, 5, 2);
+insert into "order_line" (order_id, product_id, quantity) values (9, 6, 4);
+insert into "order_line" (order_id, product_id, quantity) values (10, 4, 4);
+insert into "order_line" (order_id, product_id, quantity) values (11, 4, 3);
+insert into "order_line" (order_id, product_id, quantity) values (12, 4, 4);
+insert into "order_line" (order_id, product_id, quantity) values (13, 5, 2);
+insert into "order_line" (order_id, product_id, quantity) values (14, 5, 1);
+insert into "order_line" (order_id, product_id, quantity) values (15, 2, 5);
+insert into "order_line" (order_id, product_id, quantity) values (16, 6, 7);
+insert into "order_line" (order_id, product_id, quantity) values (17, 5, 2);
+insert into "order_line" (order_id, product_id, quantity) values (18, 6, 5);
+insert into "order_line" (order_id, product_id, quantity) values (19, 6, 3);
+insert into "order_line" (order_id, product_id, quantity) values (20, 3, 2);
+insert into "order_line" (order_id, product_id, quantity) values (1, 1, 9);
+insert into "order_line" (order_id, product_id, quantity) values (2, 4, 4);
+insert into "order_line" (order_id, product_id, quantity) values (3, 5, 9);
+insert into "order_line" (order_id, product_id, quantity) values (4, 6, 9);
+insert into "order_line" (order_id, product_id, quantity) values (5, 5, 10);
+insert into "order_line" (order_id, product_id, quantity) values (6, 2, 5);
+insert into "order_line" (order_id, product_id, quantity) values (7, 3, 1);
+insert into "order_line" (order_id, product_id, quantity) values (8, 1, 2);
+insert into "order_line" (order_id, product_id, quantity) values (9, 1, 2);
+insert into "order_line" (order_id, product_id, quantity) values (10, 1, 1);
+insert into "order_line" (order_id, product_id, quantity) values (11, 6, 10);
+insert into "order_line" (order_id, product_id, quantity) values (12, 2, 9);
+insert into "order_line" (order_id, product_id, quantity) values (13, 2, 5);
+insert into "order_line" (order_id, product_id, quantity) values (14, 1, 3);
+insert into "order_line" (order_id, product_id, quantity) values (15, 5, 9);
+insert into "order_line" (order_id, product_id, quantity) values (16, 1, 4);
+insert into "order_line" (order_id, product_id, quantity) values (17, 3, 2);
+insert into "order_line" (order_id, product_id, quantity) values (18, 1, 6);
+insert into "order_line" (order_id, product_id, quantity) values (19, 5, 2);
+insert into "order_line" (order_id, product_id, quantity) values (20, 6, 9);
+
+
+
+

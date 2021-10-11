@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS "customer"
+CREATE TABLE "customer"
 (
     id                BIGSERIAL PRIMARY KEY,
     full_name         VARCHAR(128) NOT NULL,
@@ -7,18 +7,18 @@ CREATE TABLE IF NOT EXISTS "customer"
     registration_code VARCHAR(64)  NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS "order"
+CREATE TABLE "customer_order"
 (
     id              BIGSERIAL PRIMARY KEY,
     submission_date DATE   NOT NULL,
     customer_id     BIGINT NOT NULL,
     CONSTRAINT customer_FK
         FOREIGN KEY (customer_id)
-            REFERENCES "order" (id)
+            REFERENCES "customer" (id)
             ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS "product"
+CREATE TABLE "product"
 (
     id       BIGSERIAL PRIMARY KEY,
     name     VARCHAR(128) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS "product"
     unit_price DECIMAL NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS "order_line"
+CREATE TABLE "order_line"
 (
     id         BIGSERIAL PRIMARY KEY,
     order_id   BIGINT  NOT NULL,
@@ -38,6 +38,6 @@ CREATE TABLE IF NOT EXISTS "order_line"
             ON DELETE CASCADE,
     CONSTRAINT order_FK
         FOREIGN KEY (order_id)
-            REFERENCES "order" (id)
+            REFERENCES "customer_order" (id)
             ON DELETE CASCADE
 );
