@@ -44,6 +44,8 @@ To run the application itself, you run the following command.
 ./gradlew bootRun
 ```
 
+This application uses Liquibase migrations. Therefore, a migration is created on the very first start-up.
+
 ---
 
 # Endpoints
